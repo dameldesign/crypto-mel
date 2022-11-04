@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Sparklines, SparklinesLine } from 'react-sparklines';
-import { FaTwitter, FaFacebook, FaReddit, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaGithub, FaLinkedinIn, FaFileContract, } from 'react-icons/fa';
 import DOMPurify from 'dompurify'
 import { useParams } from 'react-router-dom';
 
@@ -139,10 +139,10 @@ const CoinPage = () => {
             </div>
           </div>
           <div className='flex justify-around p-8 text-accent'>
-            <FaTwitter />
-            <FaFacebook />
-            <FaReddit />
-            <FaGithub />
+            <a href="https://github.com/dameldesign" target="_blank"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/daniel-jesutobi-ekundayo-2b058318b/" target><FaLinkedinIn /></a>
+            <a href="https://danielekundayo.netlify.app/" target="_blank"><FaFileContract /></a>
+            <a href="https://twitter.com/damel_design?t=CQp8czcBtUxPgf5Z6ui_BQ&s=09" target="_blank"><FaTwitter/></a>
           </div>
         </div>
       </div>
