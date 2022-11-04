@@ -15,7 +15,7 @@ const CoinItem = ({ coin }) => {
     if (user?.email) {
       setSavedCoin(true);
       await updateDoc(coinPath, {
-        watchList: arrayUnion({
+        selectedList: arrayUnion({
           id: coin.id,
           name: coin.name,
           image: coin.image,

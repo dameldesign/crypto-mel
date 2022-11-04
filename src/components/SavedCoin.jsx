@@ -11,7 +11,7 @@ const SavedCoin = () => {
 
   useEffect(() => {
     onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
-      setCoins(doc.data()?.watchList);
+      setCoins(doc.data()?.selectedList);
     });
   }, [user?.email]);
 
@@ -20,7 +20,7 @@ const SavedCoin = () => {
     try {
       const result = coins.filter((item) => item.id !== passedid);
       await updateDoc(coinPath, {
-        watchList: result,
+        selectedList: result,
       });
     } catch (e) {
       console.log(e.message);
